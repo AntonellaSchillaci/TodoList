@@ -1,0 +1,43 @@
+@use "sass:color";
+
+$color-pink: #f8c8dc;
+$color-salmon: #f9a89b;
+$color-blue: #a3d8f4;
+$color-fuchsia: #f072b6;
+
+$primary-color: $color-pink;
+$secondary-color: $color-salmon;
+$accent-color: $color-blue;
+$text-color: #333;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, $color-pink, $color-salmon, $color-blue, $color-fuchsia);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: $text-color;
+  min-height: 100vh;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.todo-app {
+  max-width: 600px;
+  margin: 3rem auto;
+  background-color: rgba(255, 223, 250, 0.608);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 2.5rem;
+}
